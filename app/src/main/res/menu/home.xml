@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbar_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/toolbar_cart"
+        android:icon="@drawable/ic_cart"
+        android:title="Cart"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/toolbar_dashboard"
+        android:visible="true"
+        android:icon="@drawable/ic_context"
+        android:title="Dashboard"
+        app:showAsAction="always" >
+        <menu>
+            <item
+            android:id="@+id/toolbar_action_settings"
+            android:visible="true"
+            android:icon="@drawable/settings_black_96x96"
+            android:title="@string/action_settings"
+            app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/toolbar_wishlist"
+                android:icon="@drawable/favorite_black_96x96"
+                android:title="Wishlist"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/toolbar_profile"
+                android:icon="@drawable/account_box_black_96x96"
+                android:title="Profile"
+                app:showAsAction="never"
+                />
+            <item
+                android:id="@+id/toolbar_invoice"
+                android:icon="@drawable/invoice"
+                android:title="Invoice"
+                app:showAsAction="never"
+                />
+
+        </menu>
+    </item>
+</menu>

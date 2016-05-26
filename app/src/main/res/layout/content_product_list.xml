@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/content_padding"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:coordinatorLayout=".activities.bagdoom.ProductListActivity"
+    tools:showIn="@layout/app_bar_product_list">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingBottom="2dp"
+        android:elevation="5dp"
+        android:id="@+id/just_arrived_card"
+        app:cardCornerRadius="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/textColorBlack"
+            android:id="@+id/tex_product_list_category_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Category Name"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/just_arrived_card">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Items\n.Pull Down To Refresh"
+                android:id="@+id/text_no_product"
+                android:gravity="center"
+                android:visibility="visible"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/my_recycler_view_home"
+                android:visibility="invisible">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout></RelativeLayout>

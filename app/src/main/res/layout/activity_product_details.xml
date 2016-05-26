@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:coordinatorLayout=".activities.bagdoom.ProductDetailsActivity"
+    android:background="@color/trans">
+    <include layout="@layout/app_bar"
+        android:id="@+id/my_toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView_product_details"
+        android:layout_below="@id/my_toolbar"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/product_details_card"
+                android:layout_marginBottom="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:orientation="vertical"
+                    android:weightSum="3.0">
+                    <android.support.v4.view.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:id="@+id/product_image_pager">
+                        <ImageView
+                            android:id="@+id/product_image_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@drawable/sample_product"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitCenter"
+                            android:background="#FFFFFF">
+                        </ImageView>
+                    </android.support.v4.view.ViewPager>
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/textColorBlack"
+                        android:text="Product Name"
+                        android:layout_weight="1.0"
+                        android:id="@+id/product_name_details"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:text="Price amp Special Price"
+                        android:textColor="@color/textColorBlack"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_weight="1.0"
+                        android:id="@+id/price_text_details"
+                        android:layout_below="@id/product_name_details"
+                        android:paddingTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:weightSum="3.0"
+                        android:id="@+id/button_actions">
+
+                        <Button
+                            android:background="@color/button_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:elevation="2dp"
+                            android:layout_weight="1.0"
+                            android:text="ADD CART"
+                            android:textColor="@color/textColorWhite"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/button_add_cart" />
+                        <Button
+                            android:background="@color/button_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:elevation="2dp"
+                            android:layout_weight="1.0"
+                            android:text="ADDED CART"
+                            android:visibility="gone"
+                            android:textColor="@color/textColorWhite"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/button_remove_cart" />
+                        <Button
+                            android:background="@color/button_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:elevation="2dp"
+                            android:text="ADD WISHLIST"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.0"
+                            android:textColor="@color/textColorWhite"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/button_add_favourite" />
+                        <Button
+                            android:background="@color/button_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:elevation="2dp"
+                            android:text="ADDED WISHLIST"
+                            android:visibility="gone"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1.0"
+                            android:textColor="@color/textColorWhite"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/button_remove_favourite" />
+
+                        <Button
+                            android:background="@color/button_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:elevation="2dp"
+                            android:textColor="@color/textColorWhite"
+                            android:layout_marginLeft="5dp"
+                            android:text="ORDER NOW"
+                            android:layout_weight="1.0"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/button_order_now"/>
+                    </LinearLayout>
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_details_card"
+                        android:background="@color/button_background"
+                        android:elevation="5dp"
+                        android:minHeight="?attr/actionBarSize"
+                        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/description_review_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_below="@id/tab_layout"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/textColorWhite"
+                android:text = "Related Products"
+                android:textAppearance ="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:id="@+id/text_related_products"/>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_related_products"
+                android:id="@+id/related_product_recyler_view"
+                android:visibility="visible">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

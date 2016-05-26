@@ -1,0 +1,114 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_product_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/card_margin_bottom"
+    android:layout_marginLeft="@dimen/card_margin_left"
+    android:layout_marginRight="@dimen/card_margin_right"
+    android:layout_marginTop="2dp"
+    card_view:cardBackgroundColor="@color/card_background"
+    card_view:cardCornerRadius="@dimen/card_margin_bottom"
+    card_view:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1.0">
+
+        <LinearLayout
+            android:id="@+id/upper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.6"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <ImageView
+                android:id="@+id/image_card_order_product"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_product_image_height"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sample_product" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/text_card_order_product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:hint="Product Name"
+                        android:text="Product " />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/text_card_order_order_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_gravity="left"
+                        android:editable="false"
+                        android:hint="Order Text"
+                        android:text="Black" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/text_card_order_product_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_text"
+                        android:hint="Price"
+                        android:text="Price" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/text_card_order_product_quantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_text"
+                        android:hint="Quantity"
+                        android:inputType="number"
+                        android:text="1" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_card_order_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:background="@color/button_background"
+            android:elevation="2dp"
+            android:text="Remove"
+            android:textColor="@color/textColorWhite" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

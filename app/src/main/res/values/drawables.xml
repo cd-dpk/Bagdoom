@@ -1,0 +1,33 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+
+    <item name="ic_name" type="drawable">@drawable/name_64</item>
+    <item name="ic_phone" type="drawable">@drawable/phone_64</item>
+    <item name="ic_mail" type="drawable">@drawable/mail_64</item>
+    <item name="ic_address" type="drawable">@drawable/address_64</item>
+
+
+    <item name="ic_drawer" type="drawable">@drawable/drawer_16</item>
+    <item name="ic_search" type="drawable">@drawable/search_24</item>
+    <item name="ic_cart" type="drawable">@drawable/cart_24</item>
+    <item name="ic_context" type="drawable">@drawable/context_24</item>
+    <item name="ic_arrow_back" type="drawable">@drawable/arrow_back_white_24x24</item>
+
+    <item name="image_demo_profile" type="drawable">@drawable/account_circle_black_192x192</item>
+    <item name="ic_menu_profile" type="drawable">@drawable/account_box_black_96x96</item>
+    <item name="ic_menu_wish" type="drawable">@drawable/favorite_black_96x96</item>
+    <item name="ic_menu_settings" type="drawable">@drawable/settings_black_96x96</item>
+
+    <item name="ic_wish_0" type="drawable">@drawable/fav_1_24</item>
+    <item name="ic_wish_1" type="drawable">@drawable/fav_2_24</item>
+    <item name="ic_cart_0" type="drawable">@drawable/cart_1_24</item>
+    <item name="ic_cart_1" type="drawable">@drawable/cart_2_24</item>
+
+    <item name="ic_app" type="drawable">@drawable/bagdoom</item>
+</resources>
